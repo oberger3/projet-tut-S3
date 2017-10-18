@@ -1,9 +1,11 @@
 <?php
 
+// src/AppBundle/Entity/User.php
 namespace UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+
 /**
  * @ORM\Table(name="UTILISATEUR")
  * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
@@ -11,116 +13,85 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class User implements UserInterface, \Serializable
 {
     /**
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
     /**
-     * @ORM\Column(name="username", type="string", length=255, unique=true)
+     * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
 
     /**
-     * @ORM\Column(name="password", type="string", length=255)
+     * @ORM\Column(type="string", length=64)
      */
     private $password;
 
     /**
-     * @ORM\Column(name="email", type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $email;
 
     /**
-     * @ORM\Column(name="roles", type="string",  length=255)
+     * @ORM\Column(type="string", length=60)
      */
-    private $roles = array();
+    private $roles;
 
-    // Les getters et setters
+    public function __construct()
+    {
+        // may not be needed, see xsection on salt below
+        // $this->salt = md5(uniqid('', true));
+    }
+
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    public function getSalt()
+    {
+        // you *may* need a real salt depending on your encoder
+        // see section on salt below
+        return null;
+    }
+
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    public function getRoles()
+    {
+        return array($this->roles);
+    }
 
     public function eraseCredentials()
     {
     }
 
-    /**
-     * String representation of object
-     * @link http://php.net/manual/en/serializable.serialize.php
-     * @return string the string representation of the object or null
-     * @since 5.1.0
-     */
+    /** @see \Serializable::serialize() */
     public function serialize()
     {
-        // TODO: Implement serialize() method.
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt,
+        ));
     }
 
-    /**
-     * Constructs the object
-     * @link http://php.net/manual/en/serializable.unserialize.php
-     * @param string $serialized <p>
-     * The string representation of the object.
-     * </p>
-     * @return void
-     * @since 5.1.0
-     */
+    /** @see \Serializable::unserialize() */
     public function unserialize($serialized)
     {
-        // TODO: Implement unserialize() method.
-    }
-
-    /**
-     * Returns the roles granted to the user.
-     *
-     * <code>
-     * public function getRoles()
-     * {
-     *     return array('ROLE_USER');
-     * }
-     * </code>
-     *
-     * Alternatively, the roles might be stored on a ``roles`` property,
-     * and populated in any number of different ways when the user object
-     * is created.
-     *
-     * @return (Role|string)[] The user roles
-     */
-    public function getRoles()
-    {
-        // TODO: Implement getRoles() method.
-    }
-
-    /**
-     * Returns the password used to authenticate the user.
-     *
-     * This should be the encoded password. On authentication, a plain-text
-     * password will be salted, encoded, and then compared to this value.
-     *
-     * @return string The password
-     */
-    public function getPassword()
-    {
-        // TODO: Implement getPassword() method.
-    }
-
-    /**
-     * Returns the salt that was originally used to encode the password.
-     *
-     * This can return null if the password was not encoded using a salt.
-     *
-     * @return string|null The salt
-     */
-    public function getSalt()
-    {
-        // TODO: Implement getSalt() method.
-    }
-
-    /**
-     * Returns the username used to authenticate the user.
-     *
-     * @return string The username
-     */
-    public function getUsername()
-    {
-        // TODO: Implement getUsername() method.
+        list (
+            $this->id,
+            $this->username,
+            $this->password,
+            // see section on salt below
+            // $this->salt
+            ) = unserialize($serialized);
     }
 }
