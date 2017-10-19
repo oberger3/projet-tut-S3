@@ -85,6 +85,7 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
         'A' => 
         array (
             'AppBundle\\' => 10,
+            'AdminBundle\\' => 12,
         ),
     );
 
@@ -236,6 +237,10 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
         'AppBundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/AppBundle',
+        ),
+        'AdminBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/AdminBundle',
         ),
     );
 

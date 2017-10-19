@@ -32,9 +32,22 @@ security:
             form_login:
                 login_path: login
                 check_path: login_check
+                always_use_default_target_path: true
+                default_target_path: admin
             logout:
                 path:       logout
                 target:     login
+        admin:
+            pattern:   ^/admin
+            anonymous: false
+            provider:  main
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout:
+                path:       logout
+                target:     login
+
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
@@ -44,6 +57,6 @@ security:
 
     access_control:
         - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, roles: ROLE_ADMIN }
         - { path: ^/login_check, roles: ROLE_USER }
         - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY  }
