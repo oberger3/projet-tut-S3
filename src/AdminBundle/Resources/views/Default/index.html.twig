@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chæarset="UTF-8" />
+    <title>{% block title %}Administration{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/fruxfoundation/css/foundation.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/style.css') }}" />
+    <script type="text/javascript" src="{{ asset('bundles/fruxfoundation/js/vendor/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fruxfoundation/js/vendor/what-input.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fruxfoundation/js/foundation.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/fruxfoundation/js/app.js') }}"></script>
+</head>
+<body style="background-color: #e4e4e6">
+{% include "menuAdmin.html.twig" %}
+{% block body %}
+    <div style="height: 100%; width: auto">
+        <div style="display: flex; justify-content: space-between; padding-top: 100px; padding-left: 10%; padding-right: 10%;">
+            <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier la galerie</button>
+            <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier le blog</button>
+            <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier les évenements</button>
+        </div>
+        <div class="row" style="display: flex; padding-top: 50px;">
+            <div class="columns">
+                <h2>Commentaires récents</h2>
+                <table class="stack" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+                    <thead>
+                    <tr>
+                        <th width="50">Pseudo</th>
+                        <th width="250">Mail</th>
+                        <th>Commentaires</th>
+                        <th width="100">Date</th>
+                        <th width="100">Opérations</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Thomas</td>
+                        <td>thomas.orange@gmail.com</td>
+                        <td>This is longer content Donec id elit non mi porta gravida at eget metus. This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                        <td>12/10/2017 18:30</td>
+                        <td>
+                           <button type="button" style="color:dodgerblue">Répondre</button>
+                            <button type="button" style="color:red">Supprimer</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
