@@ -18,6 +18,7 @@
             <div class="error">{{ error.message }}</div>
           {% endif %}
         <br>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
         <input type="submit" style="color: white" name="connexion" class="sign-in-form-button" value="Connexion"/>
 
       </div>
