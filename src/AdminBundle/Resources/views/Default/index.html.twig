@@ -16,7 +16,8 @@
 {% include "menuAdmin.html.twig" %}
 {% block body %}
     <div style="height: 100%; width: auto;">
-        <div style="display: flex; justify-content: space-between; padding-top: 60px; padding-left: 10%; padding-right: 10%;">
+        <div style="text-align: center; padding-top: 20px"><h1>HOME</h1></div>
+        <div style="display: flex; justify-content: space-between; padding-top: 20px; padding-left: 10%; padding-right: 10%;">
             <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier la galerie</button>
             <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier le blog</button>
             <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier les évenements</button>
@@ -31,6 +32,7 @@
                         <th width="250">Mail</th>
                         <th>Commentaires</th>
                         <th width="100">Type</th>
+                        <th width="100">Titre</th>
                         <th width="60">Date</th>
                         <th width="100">Opérations</th>
                     </tr>
@@ -40,7 +42,8 @@
                         <td>Thomas</td>
                         <td>thomas.orange@gmail.com</td>
                         <td>This is longer content Donec id elit non mi porta gravida at eget metus. This is longer content Donec id elit non mi porta gravida at eget metus.</td>
-                        <td>Galerie</td>
+                        <td>Tableau</td>
+                        <td>"Couché de soleil" <a>Voir</a></td>
                         <td>12/10/2017 18:30</td>
                         <td>
                            <button type="button" style="color:dodgerblue">Répondre</button>
@@ -55,7 +58,7 @@
                     <tr>
                         <th width="50">Pseudo</th>
                         <th width="250">Mail</th>
-                        <th>Commentaires</th>
+                        <th>Message</th>
                         <th width="150">Tableau</th>
                         <th width="60">Date</th>
                         <th width="100">Opérations</th>

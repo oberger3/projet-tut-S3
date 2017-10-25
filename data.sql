@@ -2,6 +2,8 @@
 DROP TABLE IF EXISTS COMMENTAIRE_OEUVRE;
 DROP TABLE IF EXISTS COMMENTAIRE_ARTICLE;
 DROP TABLE IF EXISTS COMMENTAIRE_EVENEMENT;
+DROP TABLE IF EXISTS COMMENTAIRE;
+DROP TABLE IF EXISTS DEMANDE_TABLEAU;
 
 DROP TABLE IF EXISTS ARTICLE;
 DROP TABLE IF EXISTS OEUVRE;
@@ -124,7 +126,7 @@ CREATE TABLE COMMENTAIRE_OEUVRE(
   oeuvre_id       Int NOT NULL,
   dateAjout       DATETIME NOT NULL,
   pseudo          VARCHAR(30) NOT NULL,
-  email  VARCHAR(255) NOT NULL DEFAULT '',
+  email           VARCHAR(255) NOT NULL DEFAULT '',
   commentaire     VARCHAR(200) NOT NULL
 )DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
@@ -133,7 +135,7 @@ CREATE TABLE COMMENTAIRE_ARTICLE(
   article_id      Int NOT NULL,
   dateAjout       DATETIME NOT NULL,
   pseudo          VARCHAR(30) NOT NULL,
-  email  VARCHAR(255) NOT NULL DEFAULT '',
+  email           VARCHAR(255) NOT NULL DEFAULT '',
   commentaire     VARCHAR(200) NOT NULL
 )DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
@@ -142,20 +144,50 @@ CREATE TABLE COMMENTAIRE_EVENEMENT(
   evenement_id    Int NOT NULL,
   dateAjout       DATETIME NOT NULL,
   pseudo          VARCHAR(30) NOT NULL,
-  email  VARCHAR(255) NOT NULL DEFAULT '',
+  email           VARCHAR(255) NOT NULL DEFAULT '',
   commentaire     VARCHAR(200) NOT NULL
 )DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
+CREATE TABLE COMMENTAIRE(
+  idCommentaire int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  ressource_id    Int NOT NULL,
+  ressource_type  VARCHAR(30) NOT NULL,
+  dateAjout       DATETIME NOT NULL,
+  pseudo          VARCHAR(30) NOT NULL,
+  email           VARCHAR(255) NOT NULL DEFAULT '',
+  commentaire     VARCHAR(200) NOT NULL
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
+CREATE TABLE DEMANDE_TABLEAU(
+  idDemande       int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  oeuvre_id       Int NOT NULL,
+  date            DATETIME NOT NULL,
+  pseudo          VARCHAR(30) NOT NULL,
+  email           VARCHAR(255) NOT NULL DEFAULT '',
+  message         VARCHAR(200) NOT NULL
+)DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+
+#------------------------------------------------------------
+# Contraintes
+#------------------------------------------------------------
 ALTER TABLE OEUVRE ADD CONSTRAINT FK_OEUVRE_artiste_id FOREIGN KEY (artiste_id) REFERENCES ARTISTE(idArtiste);
 ALTER TABLE OEUVRE ADD CONSTRAINT FK_OEUVRE_categorie_id FOREIGN KEY (categorie_id) REFERENCES CATEGORIE(idCategorie);
 ALTER TABLE OEUVRE ADD CONSTRAINT FK_OEUVRE_technique_id FOREIGN KEY (technique_id) REFERENCES TECHNIQUE(idTechnique);
 ALTER TABLE ARTICLE ADD CONSTRAINT FK_ARTICLE_artiste_id FOREIGN KEY (artiste_id) REFERENCES ARTISTE(idArtiste);
 ALTER TABLE EVENEMENT ADD CONSTRAINT FK_EVENEMENT_artiste_id FOREIGN KEY (artiste_id) REFERENCES ARTISTE(idArtiste);
+
 ALTER TABLE COMMENTAIRE_OEUVRE ADD CONSTRAINT FK_COMMENTAIRE_OEUVRE_oeuvre_id FOREIGN KEY (oeuvre_id) REFERENCES OEUVRE(idOeuvre);
 ALTER TABLE COMMENTAIRE_ARTICLE ADD CONSTRAINT FK_COMMENTAIRE_ARTICLE_article_id FOREIGN KEY (article_id) REFERENCES ARTICLE(idArticle);
 ALTER TABLE COMMENTAIRE_EVENEMENT ADD CONSTRAINT FK_COMMENTAIRE_EVENEMENT_evenement_id FOREIGN KEY (evenement_id) REFERENCES EVENEMENT(idEvenement);
 
+ALTER TABLE DEMANDE_TABLEAU ADD CONSTRAINT FK_DEMANDE_TABLEAU_oeuvre_id FOREIGN KEY (idDemande) REFERENCES OEUVRE(idOeuvre);
+
+#------------------------------------------------------------
+# Inserts de test
+#------------------------------------------------------------
+INSERT INTO COMMENTAIRE VALUES (NULL, 1,'Tableau', '2017-10-01 18:00:00', 'invite', 'invite@gmail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+INSERT INTO COMMENTAIRE VALUES (NULL, 1,'Evenement', '2017-10-01 18:00:00', 'invite', 'invite@gmail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+INSERT INTO COMMENTAIRE VALUES (NULL, 1,'Article', '2017-10-01 18:00:00', 'invite', 'invite@gmail.com', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
 
 INSERT INTO ARTISTE VALUES (1, 'HEIDET', 'Martine', 'Peintre');
 INSERT INTO CATEGORIE VALUES (1, 'Paysage');
