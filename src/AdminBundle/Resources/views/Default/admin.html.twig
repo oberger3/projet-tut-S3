@@ -16,15 +16,10 @@
 {% include "menuAdmin.html.twig" %}
 {% block body %}
     <div style="height: 100%; width: auto;">
-        <div style="text-align: center; padding-top: 20px"><h1>HOME</h1></div>
-        <div style="display: flex; justify-content: space-between; padding-top: 20px; padding-left: 10%; padding-right: 10%;">
-            <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier la galerie</button>
-            <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier le blog</button>
-            <button type="button" class="button" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 20px;width: 250px; height: 150px; border-radius: 10px;">Modifier les évenements</button>
-        </div>
+        <div style="text-align: center; padding-top: 15px"><h2>Tableau de bord</h2></div>
         <div class="row" style="display: flex; padding-top: 50px; height: auto">
             <div class="columns">
-                <h2>Commentaires récents</h2>
+                <div style="font-size: 30px"> Commentaires récents - <a href="#" style="font-size: 18px;">Afficher tous les commentaires</a></div>
                 <table class="stack" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
                     <thead>
                     <tr>
@@ -52,7 +47,7 @@
                     </tr>
                     </tbody>
                 </table>
-                <h2>Demande de tableau</h2>
+                <div style="font-size: 30px"> Demandes de tableau récentes - <a href="#" style="font-size: 18px;">Afficher toutes les demandes</a></div>
                 <table class="stack" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
                     <thead>
                     <tr>

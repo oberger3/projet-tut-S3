@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta chæarset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}La Fontaine aux Couleurs{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" type="text/css" href="{{ asset('bundles/fruxfoundation/css/foundation.min.css') }}" />
@@ -13,7 +13,9 @@
         <script type="text/javascript" src="{{ asset('bundles/fruxfoundation/js/app.js') }}"></script>
     </head>
     <body>
+        {% include "menu.html.twig" %}
         {% block body %}{% endblock %}
+        {% include "footer.html.twig" %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AppBundle\Entity\Evenement" table="EVENEMENT">
+    <indexes>
+      <index name="FK_EVENEMENT_artiste_id" columns="artiste_id"/>
+    </indexes>
+    <id name="idevenement" type="integer" column="idEvenement">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="titre" type="string" column="titre" length="25" nullable="false">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="datedebut" type="datetime" column="dateDebut" nullable="false"/>
+    <field name="datefin" type="datetime" column="dateFin" nullable="false"/>
+    <field name="nbparticipant" type="integer" column="nbParticipant" nullable="true">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <field name="lieu" type="string" column="lieu" length="50" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="dateajout" type="datetime" column="dateAjout" nullable="false"/>
+    <field name="derniermaj" type="datetime" column="dernierMAJ" nullable="true"/>
+    <field name="texte" type="string" column="texte" length="500" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="nbvue" type="integer" column="nbVue" nullable="true">
+      <options>
+        <option name="unsigned"/>
+        <option name="default">0</option>
+      </options>
+    </field>
+    <many-to-one field="artiste" target-entity="Artiste" fetch="LAZY">
+      <join-columns>
+        <join-column name="artiste_id" referenced-column-name="idArtiste"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
