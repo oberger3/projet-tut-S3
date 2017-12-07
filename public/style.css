@@ -1,0 +1,159 @@
+.sign-in-form {
+    padding: 1rem 1.5em;
+    border-radius: .5rem;
+    background-color: #3d454f;
+}
+
+.sign-in-form h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.sign-in-form label {
+    text-transform: uppercase;
+    color: #adadad;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.sign-in-form input {
+    color: black;
+}
+
+.sign-in-form input:focus {
+    opacity: 1;
+}
+
+.sign-in-form-username,
+.sign-in-form-password {
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    transition: all ease .4s;
+
+}
+
+.sign-in-form-button {
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+}
+
+.sign-in-form-button:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+}
+
+.contact-footer-button{
+    font-size: 15px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid #44c8ed;
+    color: white;
+    background-color: #44c8ed;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 6px 30px 6px 30px;
+    transition: all ease .4s;
+}
+.contact-footer-button:hover {
+    background-color: #8b9cb4;
+    border-color: #8b9cb4;
+    color: white;
+}
+.error{
+    text-align: center;
+    color: red;
+}
+
+/*Time for the CSS*/
+
+.slider{
+    height:400px;
+    width: fit-content; /*Same as width of the large image*/
+    position: relative;
+    /*Instead of height we will use padding*/
+
+    margin: 20px auto;
+    /*Lets add a shadow*/
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.slider>img{
+    position: absolute;
+    left: 0; top: 0;
+    transition: all 0.5s;
+}
+
+
+input[name='slide_switch'] {
+    display: none;
+}
+
+label {
+    /*Lets add some spacing for the thumbnails*/
+    margin: 18px 0 0 18px;
+
+    float: left;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    /*Default style = low opacity*/
+    opacity: 0.6;
+}
+
+label img{
+    display: block;
+}
+
+/*Time to add the click effects*/
+input[name='slide_switch']:checked+label {
+    border-color: #666;
+    opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+input[name='slide_switch'] ~ img {
+    opacity: 0;
+    transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+input[name='slide_switch']:checked+label+img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.shadow
+{
+    display:block;
+    position:relative;
+}
+
+.shadow:before
+{
+    display:block;
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+    -webkit-box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+    box-shadow:inset 0px 0px 3px 1px rgba(0,0,0,1);
+}
+
+.footer{
+    height: 28%; background-color: #3d454f; color: white; position:absolute; bottom:0; width:100%;margin-top: 20px; padding-top: 20px;
+}

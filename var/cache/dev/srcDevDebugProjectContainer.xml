@@ -326,6 +326,9 @@
     <service id="App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="App\Controller\LoginController" class="App\Controller\LoginController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="App\Kernel" class="App\Kernel" public="false" autowire="true" autoconfigure="true"/>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -463,14 +466,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -774,7 +769,7 @@
       <tag name="cache.pool"/>
       <argument>DfFnrI1jij</argument>
       <argument>0</argument>
-      <argument>HC6FbNyn2PZJTJ9nmzd8Yc</argument>
+      <argument>IaZGbv0FDcfF-OJX6750Q8</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -783,7 +778,7 @@
       <tag name="cache.pool"/>
       <argument>9RVBrO02Yw</argument>
       <argument>0</argument>
-      <argument>HC6FbNyn2PZJTJ9nmzd8Yc</argument>
+      <argument>IaZGbv0FDcfF-OJX6750Q8</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -792,7 +787,7 @@
       <tag name="cache.pool"/>
       <argument>DpqFw5+zhN</argument>
       <argument>0</argument>
-      <argument>HC6FbNyn2PZJTJ9nmzd8Yc</argument>
+      <argument>IaZGbv0FDcfF-OJX6750Q8</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -801,7 +796,7 @@
       <tag name="cache.pool"/>
       <argument>ib4LxDlA7F</argument>
       <argument>0</argument>
-      <argument>HC6FbNyn2PZJTJ9nmzd8Yc</argument>
+      <argument>IaZGbv0FDcfF-OJX6750Q8</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -811,7 +806,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>HC6FbNyn2PZJTJ9nmzd8Yc</argument>
+      <argument>IaZGbv0FDcfF-OJX6750Q8</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -821,7 +816,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>HC6FbNyn2PZJTJ9nmzd8Yc</argument>
+      <argument>IaZGbv0FDcfF-OJX6750Q8</argument>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
@@ -1640,12 +1635,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a290a04c8e0f4.32866369</argument>
+      <argument>5a29516f94f4b4.22377129</argument>
       <argument type="service" id="logger" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a290a04c8e0f4.32866369</argument>
+      <argument>5a29516f94f4b4.22377129</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2447,6 +2442,8 @@
     </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\DefaultController" class="App\Controller\DefaultController" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Controller\DefaultController" class="App\Controller\DefaultController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\LoginController" class="App\Controller\LoginController" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.App\Controller\LoginController" class="App\Controller\LoginController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>

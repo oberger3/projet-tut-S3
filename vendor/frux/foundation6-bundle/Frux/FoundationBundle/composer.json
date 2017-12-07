@@ -1,0 +1,25 @@
+{
+    "name": "frux/foundation6-bundle",
+    "type": "symfony-bundle",
+    "description": "ZURB Foundation 6 Bundle for Symfony2",
+    "keywords": ["responsive", "javascript", "symfony"],
+    "homepage": "https://github.com/fuche/FruxFoundationBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Frank Uche",
+            "email": "dev@frankuche.com",
+            "homepage": "http://frankuche.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": ">=2.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "Frux\\FoundationBundle": ""
+        }
+    },
+    "target-dir":  "Frux/FoundationBundle"
+}
