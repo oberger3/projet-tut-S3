@@ -4,171 +4,204 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
+class ComposerStaticInit5d529e74b196b4f6d1ce554c72d42492
 {
     public static $files = array (
-        '92c8763cd6170fce6fcfe7e26b4e8c10' => __DIR__ . '/..' . '/symfony/phpunit-bridge/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
-        'bd9634f2d41831496de0d3dfe4c94881' => __DIR__ . '/..' . '/symfony/polyfill-php56/bootstrap.php',
-        '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
-        '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
-        '8ad6bba037a44971c8379d8291354550' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'U' => 
+        'Z' => 
         array (
-            'UserBundle\\' => 11,
+            'Zend\\EventManager\\' => 18,
+            'Zend\\Code\\' => 10,
         ),
         'T' => 
         array (
             'Twig\\' => 5,
-            'Tests\\' => 6,
         ),
         'S' => 
         array (
-            'Symfony\\Polyfill\\Util\\' => 22,
-            'Symfony\\Polyfill\\Php70\\' => 23,
-            'Symfony\\Polyfill\\Php56\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Polyfill\\Apcu\\' => 22,
-            'Symfony\\Component\\' => 18,
-            'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
-            'Symfony\\Bundle\\MonologBundle\\' => 29,
-            'Symfony\\Bundle\\' => 15,
+            'Symfony\\Flex\\' => 13,
+            'Symfony\\Component\\Yaml\\' => 23,
+            'Symfony\\Component\\Security\\' => 27,
+            'Symfony\\Component\\Routing\\' => 26,
+            'Symfony\\Component\\PropertyAccess\\' => 33,
+            'Symfony\\Component\\Process\\' => 26,
+            'Symfony\\Component\\Inflector\\' => 28,
+            'Symfony\\Component\\HttpKernel\\' => 29,
+            'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\Finder\\' => 25,
+            'Symfony\\Component\\Filesystem\\' => 29,
+            'Symfony\\Component\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\Dotenv\\' => 25,
+            'Symfony\\Component\\DependencyInjection\\' => 38,
+            'Symfony\\Component\\Debug\\' => 24,
+            'Symfony\\Component\\Console\\' => 26,
+            'Symfony\\Component\\Config\\' => 25,
+            'Symfony\\Component\\Cache\\' => 24,
+            'Symfony\\Component\\Asset\\' => 24,
+            'Symfony\\Bundle\\WebServerBundle\\' => 31,
+            'Symfony\\Bundle\\TwigBundle\\' => 26,
+            'Symfony\\Bundle\\SecurityBundle\\' => 30,
+            'Symfony\\Bundle\\MakerBundle\\' => 27,
+            'Symfony\\Bundle\\FrameworkBundle\\' => 31,
             'Symfony\\Bridge\\Twig\\' => 20,
-            'Symfony\\Bridge\\ProxyManager\\' => 28,
-            'Symfony\\Bridge\\PhpUnit\\' => 23,
-            'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
-            'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
-            'Sensio\\Bundle\\DistributionBundle\\' => 33,
         ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
-            'Psr\\Link\\' => 9,
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
-        ),
-        'M' => 
-        array (
-            'Monolog\\' => 8,
-        ),
-        'I' => 
-        array (
-            'Incenteev\\ParameterHandler\\' => 27,
-        ),
-        'F' => 
-        array (
-            'Fig\\Link\\' => 9,
+            'PackageVersions\\' => 16,
         ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
+            'Doctrine\\DBAL\\Migrations\\' => 25,
             'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
-        'C' => 
-        array (
-            'Composer\\CaBundle\\' => 18,
-        ),
         'A' => 
         array (
-            'AppBundle\\' => 10,
-            'AdminBundle\\' => 12,
+            'App\\Tests\\' => 10,
+            'App\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'UserBundle\\' => 
+        'Zend\\EventManager\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/UserBundle',
+            0 => __DIR__ . '/..' . '/zendframework/zend-eventmanager/src',
+        ),
+        'Zend\\Code\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
         ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
-        'Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
-        ),
-        'Symfony\\Polyfill\\Util\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-util',
-        ),
-        'Symfony\\Polyfill\\Php70\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
-        ),
-        'Symfony\\Polyfill\\Php56\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php56',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Polyfill\\Apcu\\' => 
+        'Symfony\\Flex\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-apcu',
+            0 => __DIR__ . '/..' . '/symfony/flex/src',
         ),
-        'Symfony\\Component\\' => 
+        'Symfony\\Component\\Yaml\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component',
+            0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
-        'Symfony\\Bundle\\SwiftmailerBundle\\' => 
+        'Symfony\\Component\\Security\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/swiftmailer-bundle',
+            0 => __DIR__ . '/..' . '/symfony/security',
         ),
-        'Symfony\\Bundle\\MonologBundle\\' => 
+        'Symfony\\Component\\Routing\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/monolog-bundle',
+            0 => __DIR__ . '/..' . '/symfony/routing',
         ),
-        'Symfony\\Bundle\\' => 
+        'Symfony\\Component\\PropertyAccess\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bundle',
+            0 => __DIR__ . '/..' . '/symfony/property-access',
+        ),
+        'Symfony\\Component\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/process',
+        ),
+        'Symfony\\Component\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/inflector',
+        ),
+        'Symfony\\Component\\HttpKernel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-kernel',
+        ),
+        'Symfony\\Component\\HttpFoundation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Symfony\\Component\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/filesystem',
+        ),
+        'Symfony\\Component\\EventDispatcher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'Symfony\\Component\\Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dotenv',
+        ),
+        'Symfony\\Component\\DependencyInjection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
+        ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
+        'Symfony\\Component\\Console\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/console',
+        ),
+        'Symfony\\Component\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/config',
+        ),
+        'Symfony\\Component\\Cache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/cache',
+        ),
+        'Symfony\\Component\\Asset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/asset',
+        ),
+        'Symfony\\Bundle\\WebServerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/web-server-bundle',
+        ),
+        'Symfony\\Bundle\\TwigBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/twig-bundle',
+        ),
+        'Symfony\\Bundle\\SecurityBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/security-bundle',
+        ),
+        'Symfony\\Bundle\\MakerBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/maker-bundle/src',
+        ),
+        'Symfony\\Bundle\\FrameworkBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/framework-bundle',
         ),
         'Symfony\\Bridge\\Twig\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Twig',
-        ),
-        'Symfony\\Bridge\\ProxyManager\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/ProxyManager',
-        ),
-        'Symfony\\Bridge\\PhpUnit\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/phpunit-bridge',
-        ),
-        'Symfony\\Bridge\\Monolog\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Monolog',
+            0 => __DIR__ . '/..' . '/symfony/twig-bridge',
         ),
         'Symfony\\Bridge\\Doctrine\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Bridge/Doctrine',
-        ),
-        'Sensio\\Bundle\\GeneratorBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sensio/generator-bundle',
+            0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
         ),
         'Sensio\\Bundle\\FrameworkExtraBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle',
-        ),
-        'Sensio\\Bundle\\DistributionBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/sensio/distribution-bundle',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -178,10 +211,6 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
-        'Psr\\Link\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/link/src',
-        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
@@ -190,21 +219,17 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
         array (
             0 => __DIR__ . '/..' . '/psr/cache/src',
         ),
-        'Monolog\\' => 
+        'PackageVersions\\' => 
         array (
-            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
-        ),
-        'Incenteev\\ParameterHandler\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
-        ),
-        'Fig\\Link\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fig/link-util/src',
+            0 => __DIR__ . '/..' . '/ocramius/package-versions/src/PackageVersions',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+        ),
+        'Doctrine\\DBAL\\Migrations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/migrations/lib/Doctrine/DBAL/Migrations',
         ),
         'Doctrine\\Common\\Inflector\\' => 
         array (
@@ -222,6 +247,10 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
         ),
+        'Doctrine\\Bundle\\MigrationsBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle',
+        ),
         'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-cache-bundle',
@@ -230,17 +259,13 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
-        'Composer\\CaBundle\\' => 
+        'App\\Tests\\' => 
         array (
-            0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
+            0 => __DIR__ . '/../..' . '/tests',
         ),
-        'AppBundle\\' => 
+        'App\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/AppBundle',
-        ),
-        'AdminBundle\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/AdminBundle',
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 
@@ -252,18 +277,11 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
-        'S' => 
+        'P' => 
         array (
-            'SensioLabs\\Security' => 
+            'ProxyManager\\' => 
             array (
-                0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
-            ),
-        ),
-        'F' => 
-        array (
-            'Frux\\FoundationBundle' => 
-            array (
-                0 => __DIR__ . '/..' . '/frux/foundation6-bundle',
+                0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
             ),
         ),
         'D' => 
@@ -288,29 +306,16 @@ class ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a
     );
 
     public static $classMap = array (
-        'AppCache' => __DIR__ . '/../..' . '/app/AppCache.php',
-        'AppKernel' => __DIR__ . '/../..' . '/app/AppKernel.php',
-        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
-        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
-        'Collator' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/Collator.php',
-        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
-        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
-        'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/IntlDateFormatter.php',
-        'Locale' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/Locale.php',
-        'NumberFormatter' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/NumberFormatter.php',
-        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
-        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
         'SqlFormatter' => __DIR__ . '/..' . '/jdorn/sql-formatter/lib/SqlFormatter.php',
-        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit374429f4ab4935127e2d36a0613c8d3a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5d529e74b196b4f6d1ce554c72d42492::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5d529e74b196b4f6d1ce554c72d42492::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit5d529e74b196b4f6d1ce554c72d42492::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit5d529e74b196b4f6d1ce554c72d42492::$classMap;
 
         }, null, ClassLoader::class);
     }
