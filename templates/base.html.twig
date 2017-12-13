@@ -13,49 +13,167 @@
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/vendor/what-input.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/foundation.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/app.js') }}"></script>
+    <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>
 </head>
 <body>
     {% include "menu.html.twig" %}
-    {% block body %}
-        <div style="font-size: 40px; text-align: center; margin-top: 20px">Mes dernières créations</div>
-        <div class="slider">
-            <img src="tableau-1.png" style="height:400px"/>
-            <img src="tableau-2.png" style="height:400px"/>
-            <img src="tableau-3.png" style="height:400px"/>
-            <img src="tableau-4.png" style="height:400px"/>
-            <img src="tableau-1.png" style="height:400px"/>
-            <img src="tableau-2.png" style="height:400px"/>
-        </div>
-        <div for="slider" style="width: fit-content; height: 100px; margin-right: auto;margin-left: auto">
-            <input type="radio" name="slide_switch" id="id1" checked="checked"/>
-            <label for="id1">
-                <img src="tableau-1.png" style="max-height: 100px"/>
-            </label>
-            <input type="radio" name="slide_switch" id="id2"/>
-            <label for="id2">
-                <img src="tableau-2.png" style="max-height: 100px"/>
-            </label>
-            <input type="radio" name="slide_switch" id="id3"/>
-            <label for="id3">
-                <img src="tableau-3.png" style="max-height: 100px"/>
-            </label>
-            <input type="radio" name="slide_switch" id="id4"/>
-            <label for="id4">
-                <img src="tableau-4.png" style="max-height: 100px"/>
-            </label>
-            <input type="radio" name="slide_switch" id="id5"/>
-            <label for="id5">
-                <img src="tableau-1.png" style="max-height: 100px"/>
-            </label>
-            <input type="radio" name="slide_switch" id="id6"/>
-            <label for="id6">
-                <img src="tableau-2.png" style="max-height: 100px"/>
-            </label>
-        </div>
+    {% block contenu %}
+        <main>
+            <div style="font-family: 'Master Works - Demo', serif; font-size: 40px; text-align: center;  margin-top: 30px">Mes dernieres creations</div>
+            <div class="slider">
+                <input type="radio" name="slide_switch" id="id1" checked="checked"/>
+                <label for="id1">
+                    <img src="tableau-1.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-1.png" style="height:400px"/>
 
+                <input type="radio" name="slide_switch" id="id2"/>
+                <label for="id2">
+                    <img src="tableau-2.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-2.png" style="height:400px"/>
 
+                <input type="radio" name="slide_switch" id="id3"/>
+                <label for="id3">
+                    <img src="tableau-3.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-3.png" style="height:400px"/>
+
+                <input type="radio" name="slide_switch" id="id4"/>
+                <label for="id4">
+                    <img src="tableau-4.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-4.png" style="height:400px"/>
+
+                <input type="radio" name="slide_switch" id="id5"/>
+                <label for="id5">
+                    <img src="tableau-5.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-5.png" style="height:400px"/>
+
+                <input type="radio" name="slide_switch" id="id6"/>
+                <label for="id6">
+                    <img src="tableau-6.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-6.png" style="height:400px"/>
+                <input type="radio" name="slide_switch" id="id7" checked="checked"/>
+                <label for="id7">
+                    <img src="tableau-1.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-1.png" style="height:400px"/>
+
+                <input type="radio" name="slide_switch" id="id8"/>
+                <label for="id8">
+                    <img src="tableau-2.png" style="max-height: 100px"/>
+                </label>
+                <img src="tableau-2.png" style="height:400px"/>
+             </div>
+
+            <div style="margin-top: 20px;margin-bottom: 20px; box-shadow: 0px 0px 10px lightgrey; padding-top:20px; padding-bottom: 20px">
+                <div class="row large-collapse">
+                    <div class="large-8 columns"> <img style="box-shadow: 0px 0px 10px lightgrey;" src="https://www.w3schools.com/w3css/img_fjords.jpg"></div>
+                    <div class="large-4 columns" style="text-align: center">
+                     <h1 style="font-family: 'Master Works - Demo', serif; margin-bottom: -20px">Martine Heidet</h1>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div style="font-family: 'Master Works - Demo', serif; font-size: 40px; text-align: center;">Tableaux populaires</div>
+                <div class="row" >
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-1.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-4.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-2.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-3.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-6.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-5.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-1.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-3 columns">
+                        <div  id="test"  style="margin: 20px; padding:10px;max-width: 300px;box-shadow: 0px 0px 10px lightgrey;">
+                            <img src="tableau-7.png" style="display:block; height: 250px; width: auto; margin-right: auto; margin-left: auto">
+                            <div style="height: fit-content; padding: 3px">
+                                <div style="text-align:center; text-transform: uppercase; font-weight: bold">Titre</div>
+                                <div>Catégorie | Catégorie</div>
+                                <div class="footer-alignment"><i class="fi-heart" style="font-size: 20px;  margin-right: 7px;"></i>32 &nbsp; <i class="fi-comment" style="font-size: 20px;  margin-right: 7px;"></i>4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="button-homepage" style="margin-top: 30px;;">Accéder à la galerie</a>
+            </div>
+            <div class="gallery" style="margin-top: 50px">
+                <div style="font-family: 'Master Works - Demo', serif; font-size: 40px; text-align: center;">Mes Derniers rticles</div>
+            </div>
+            <div class="gallery" style="margin-top: 50px">
+                <div style="font-family: 'Master Works - Demo', serif; font-size: 40px; text-align: center;">Mes Evenements</div>
+            </div>
+        </main>
     {% endblock %}
-    <!-- include "footer.html.twig" -->
+    {% include "footer.html.twig" %}
     {% block javascripts %}{% endblock %}
 </body>
 </html>

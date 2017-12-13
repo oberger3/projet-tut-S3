@@ -1,8 +1,5 @@
 <style>
-        @font-face {
-                font-family: BeautyFont;
-                src: url('../fonts/BeautyDemo.ttf');
-        }
+
 
         body {
                 font-family: 'Roboto', sans-serif;
@@ -75,7 +72,7 @@
                 position: relative;
         }
         .stroke ul li a:after,
-        .fill ul li a:after {
+        .fill ul li a:after{
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -87,7 +84,8 @@
                 background: #aaa;
                 height: 1px;
         }
-        .stroke ul li a:hover:after {
+
+        .stroke ul li a:hover:after{
                 width: 100%;
         }
 
@@ -95,26 +93,30 @@
                 transition: all 2s;
         }
 
-        .fill ul li a:after {
+        .fill ul li a:after{
                 text-align: left;
                 content: '.';
                 margin: 0;
                 opacity: 0;
         }
-        .fill ul li a:hover {
+        .fill ul li a:hover{
                 color: #fff;
                 z-index: 1;
         }
-        .fill ul li a:hover:after {
+        .fill ul li a:hover:after{
                 z-index: -10;
                 animation: fill 1s forwards;
                 -webkit-animation: fill 1s forwards;
                 -moz-animation: fill 1s forwards;
                 opacity: 1;
         }
+        #select:after{
+                width: 100%;
+        }
 
-
-
+        #select{
+                color:#555!important;
+        }
 
         /* Keyframes */
         @-webkit-keyframes fill {
@@ -161,20 +163,21 @@
                 }
         }
 </style>
-<div class="top-bar" style="background-color: white;   box-shadow: 0px 2px 10px lightgrey;">
-        <div class="top-bar-left">
-                <ul class="menu" data-dropdown-menu style="padding-top: 8px; background-color: white">
-                        <li style="background-color: white; font-family:'Master Works - Demo',serif; font-size:35px;" class="menu-text">Martine Heidet</li>
-                </ul>
+<nav>
+        <div class="top-bar" style="background-color: white;   box-shadow: 0px 2px 10px lightgrey;">
+                <div class="top-bar-left">
+                        <ul class="menu" data-dropdown-menu style="padding-top: 8px; background-color: white">
+                                <li style="background-color: white; font-family:'Master Works - Demo',serif; font-size:35px;" class="menu-text">Martine Heidet</li>
+                        </ul>
+                </div>
+                <div class="top-bar-right stroke">
+                        <ul class="menu" data-dropdown-menu style="color: black;padding-top: 15px; background-color: white; font-size: 15px">
+                                <li><a {% if app.request.attributes.get('_route') == 'homepage' %}  id="select" {% endif %} href="{{ path("homepage") }}">Accueil</a></li>
+                                <li><a {% if app.request.attributes.get('_route') == 'gallery' %} id="select" {% endif %}href="#">Galerie</a></li>
+                                <li><a {% if app.request.attributes.get('_route') == 'blog' %}  id="select" {% endif %}href="#">Blog</a></li>
+                                <li><a {% if app.request.attributes.get('_route') == 'event' %}  id="select" {% endif %}href="#">Evenements</a></li>
+                                <li><a {% if app.request.attributes.get('_route') == 'contact' %} id="select" {% endif %} href="{{ path("contact") }}">Contact</a></li>
+                        </ul>
+                </div>
         </div>
-        <div class="top-bar-right stroke">
-                <ul class="menu" data-dropdown-menu style="color: black;padding-top: 15px; background-color: white; font-size: 15px">
-                        <li><a style="color:#555!important;" href="{{ path("homepage") }}">Accueil</a></li>
-                        <li><a href="#">Galerie</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Evenements</a></li>
-                        <li><a href="#">Contact</a></li>
-                </ul>
-        </div>
-</div>
-
+</nav>
