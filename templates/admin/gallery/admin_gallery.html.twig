@@ -1,0 +1,60 @@
+{% extends 'admin/admin.html.twig' %}
+
+{% block body %}
+    <main style="margin-left: 250px">
+        <title>{% block title %}Gestion Galerie{% endblock %}</title>
+        <h1>Gestion de la galerie</h1>
+        <div class="row" style="width: 100%">
+            <div class="large-6 columns" style="margin-top: 30px">
+                <a href="" class="contact-footer-button" style="display: block;font-size: 20px!important; width:50%;margin-left: auto; margin-right: auto">Ajouter un tableau</a>
+            </div>
+            <div class="large-6 columns" style="margin-top: 30px">
+                <a href="" class="contact-footer-button" style="display: block;font-size: 20px!important; width:50%;margin-left: auto; margin-right: auto">Afficher les catégories</a>
+            </div>
+        </div>
+            <div class="large-12 columns">
+                <div style="font-size: 30px">Tableaux </div>
+                <table class="stack" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 100%">
+                    <thead>
+                    <tr>
+                        <th >ID</th>
+                        <th> Photo</th>
+                        <th >Nom</th>
+                        <th >Date</th>
+                        <th >Disponibilité</th>
+                        <th> Description</th>
+                        <th >Opérations</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td><img src="{{ asset('tableau-1.png') }}" style="max-height: 100px; max-width: 100px"/></td>
+                        <td>Couché de soleil</td>
+                        <td>12/10/2017 18:30</td>
+                        <td>Disponible</td>
+                        <td>This is longer content Donec id elit non mi porta gravida at eget metus...</td>
+                        <td>
+                            <button type="button" style="color:lightgreen">Détails</button> <br>
+                            <button type="button" style="color:dodgerblue">Modifier</button> <br>
+                            <button type="button" style="color:red">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="{{ asset('tableau-2.png') }}" style="max-height: 100px; max-width: 100px"/></td>
+                        <td>Couché de soleil</td>
+                        <td>12/10/2017 18:30</td>
+                        <td>Disponible</td>
+                        <td>This is longer content Donec id elit non mi porta gravida at eget metus...</td>
+                        <td>
+                            <button type="button" style="color:lightgreen">Détails</button> <br>
+                            <button type="button" style="color:dodgerblue">Modifier</button> <br>
+                            <button type="button" style="color:red">Supprimer</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+    </main>
+{% endblock %}

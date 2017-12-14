@@ -4,16 +4,15 @@
     <meta chæarset="UTF-8" />
     <title>{% block title %}Administration{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('fruxfoundation/css/foundation.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('fruxfoundation/css/foundation.css') }}" />
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/vendor/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/vendor/what-input.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/foundation.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('fruxfoundation/js/app.js') }}"></script>
 </head>
 <body style="background-color: #e4e4e6">
-{% include "menuAdmin.html.twig" %}
+{% include "admin/menuAdmin.html.twig" %}
 {% block body %}
     <main>
         <div style="height: 100%; width: auto;">

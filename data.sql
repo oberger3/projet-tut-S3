@@ -23,10 +23,10 @@ DROP TABLE IF EXISTS TECHNIQUE;
 # Table: OEUVRE
 #------------------------------------------------------------
 
-CREATE TABLE OEUVRE(
-        idOeuvre       int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        nomOeuvre      Varchar (40) NOT NULL ,
-        artiste_id      int(10) NOT NULL,
+CREATE TABLE painting(
+        id       int(10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        name      Varchar (40) NOT NULL ,
+        artist_id      int(10) NOT NULL,
         disponibilite  BOOLEAN NOT NULL ,
         dateAjout      DATETIME NOT NULL,
         categorie_id   int(10),

@@ -406,6 +406,9 @@
     <service id="App\Controller\AdminController" class="App\Controller\AdminController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="App\Controller\AdminGalleryController" class="App\Controller\AdminGalleryController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
     <service id="App\Controller\ContactController" class="App\Controller\ContactController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
@@ -650,7 +653,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>09+ulNNquQ8mAkwqh8sLQJ</argument>
+      <argument>fTc7fg4F-NJTtEnqwth4SL</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -660,7 +663,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>09+ulNNquQ8mAkwqh8sLQJ</argument>
+      <argument>fTc7fg4F-NJTtEnqwth4SL</argument>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
@@ -2122,12 +2125,12 @@
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
-      <argument>5a323521279817.54586280</argument>
+      <argument>5a3292311c6b45.73779187</argument>
       <argument type="service" id="logger" on-invalid="null"/>
       <argument type="service" id="security.authentication.manager"/>
     </service>
     <service id="security.authentication.provider.anonymous.main" class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-      <argument>5a323521279817.54586280</argument>
+      <argument>5a3292311c6b45.73779187</argument>
     </service>
     <service id="security.exception_listener.main" class="Symfony\Component\Security\Http\Firewall\ExceptionListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -3143,6 +3146,8 @@
     </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\AdminController" class="App\Controller\AdminController" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Controller\AdminController" class="App\Controller\AdminController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\AdminGalleryController" class="App\Controller\AdminGalleryController" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.App\Controller\AdminGalleryController" class="App\Controller\AdminGalleryController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\ContactController" class="App\Controller\ContactController" public="false" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\DefaultController" class="App\Controller\DefaultController" public="false" autowire="true" abstract="true"/>
@@ -3447,7 +3452,7 @@
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>DfFnrI1jij</argument>
       <argument>0</argument>
-      <argument>09+ulNNquQ8mAkwqh8sLQJ</argument>
+      <argument>fTc7fg4F-NJTtEnqwth4SL</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3455,7 +3460,7 @@
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>9RVBrO02Yw</argument>
       <argument>0</argument>
-      <argument>09+ulNNquQ8mAkwqh8sLQJ</argument>
+      <argument>fTc7fg4F-NJTtEnqwth4SL</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3463,7 +3468,7 @@
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>DpqFw5+zhN</argument>
       <argument>0</argument>
-      <argument>09+ulNNquQ8mAkwqh8sLQJ</argument>
+      <argument>fTc7fg4F-NJTtEnqwth4SL</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3471,7 +3476,7 @@
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <argument>ib4LxDlA7F</argument>
       <argument>0</argument>
-      <argument>09+ulNNquQ8mAkwqh8sLQJ</argument>
+      <argument>fTc7fg4F-NJTtEnqwth4SL</argument>
       <argument>/Users/tbichot/Sites/projet-tut-S3/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
