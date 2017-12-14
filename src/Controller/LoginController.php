@@ -11,8 +11,8 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class LoginController extends Controller
 {
     /**
-     * @Route("/login", name="login")
-     */
+ * @Route("/login", name="login")
+ */
     public function login(Request $request, AuthenticationUtils $authUtils)
     {
         // get the login error if there is one

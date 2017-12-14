@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta chæarset="UTF-8" />
-    <title>{% block title %}Martine Heidet{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ asset('fruxfoundation/css/foundation.min.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('foundation-icons/foundation-icons.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}" />
-    <script type="text/javascript" src="{{ asset('fruxfoundation/js/vendor/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('fruxfoundation/js/vendor/what-input.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('fruxfoundation/js/foundation.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('fruxfoundation/js/app.js') }}"></script>
-</head>
-<body>
-{% include "menu.html.twig" %}
+{% extends 'base.html.twig' %}
+
 {% block contenu %}
     <main>
+        <title>{% block title %}Contact{% endblock %}</title>
         <div class="row" style="padding-bottom: 80px;">
             <div class="large-10 large-offset-1 columns">
                 <h1 style="margin-top: 20px">Contactez-moi !</h1>
@@ -36,7 +21,3 @@
         </div>
     </main>
 {% endblock %}
-{% include "footer.html.twig" %}
-{% block javascripts %}{% endblock %}
-</body>
-</html>
